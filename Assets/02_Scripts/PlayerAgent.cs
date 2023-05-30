@@ -19,6 +19,9 @@ public class PlayerAgent : Agent
     public Vector3 initPosBlue = new Vector3(-5.5f, 0.5f, 0.0f);
     public Vector3 initPosRed = new Vector3(5.5f, 0.5f, 0.0f);
 
+    // 플레이어 색상
+    public Material[] materials;
+
     // 플레이어 위치와 회전을 최기화
     public void InitPlayer()
     {
