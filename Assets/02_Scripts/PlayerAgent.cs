@@ -52,6 +52,40 @@ public class PlayerAgent : Agent
         MaxStep = 10000;
     }
 
+    public override void OnEpisodeBegin()
+    {
+        // 플레이어 초기화
+        InitPlayer();
+        // 물리 초기화
+        rb.velocity = rb.angularVelocity = Vector3.zero;
+    }
+
+    public override void CollectObservations(VectorSensor sensor)
+    {
+
+    }
+
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+    }
+
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        // 이산 수치
+        var actions = actionsOut.DiscreteActions;
+        // 파라메터 초기화
+        actions.Clear();
+
+        /*
+            Branch[0] 정지, 전진, 후진 (W, S)
+            Branch[1] 정지, 왼쪽 이동, 오른쪽 이동  (Q, E)
+            Branch[2] 정지, 왼쪽 회전, 오른쪽 회전  (A, D)
+        */
+
+
+    }
+
+
     // 플레이어 위치와 회전을 최기화
     public void InitPlayer()
     {
