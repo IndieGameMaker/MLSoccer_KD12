@@ -34,7 +34,7 @@ public class Ball : MonoBehaviour
             players[0].EndEpisode();
             players[1].EndEpisode();
 
-            ++blueScore;
+            blueTeamScore.text = (++blueScore).ToString("000");
         }
 
         if (coll.collider.CompareTag("BLUE_GOAL"))
@@ -50,7 +50,7 @@ public class Ball : MonoBehaviour
             players[0].EndEpisode();
             players[1].EndEpisode();
 
-            ++redScore;
+            redTeamScore.text = $"{++redScore:000}";
         }
     }
 
