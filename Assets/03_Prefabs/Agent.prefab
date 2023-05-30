@@ -140,6 +140,11 @@ MonoBehaviour:
   team: 0
   initPosBlue: {x: -5.5, y: 0.5, z: 0}
   initPosRed: {x: 5.5, y: 0.5, z: 0}
+  initRotBlue: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  initRotRed: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
+  materials:
+  - {fileID: 2100000, guid: c9fa44c2c3f8ce74ca39a3355ea42631, type: 2}
+  - {fileID: 2100000, guid: b0da1813c36914e678ba57f2790424e1, type: 2}
 --- !u!1 &2676448712085447776
 GameObject:
   m_ObjectHideFlags: 0

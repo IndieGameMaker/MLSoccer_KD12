@@ -35,6 +35,9 @@ public class PlayerAgent : Agent
 
     public override void Initialize()
     {
+        // 플레이어 색상 설정
+        GetComponent<Renderer>().material = materials[(int)team];
+
         InitPlayer();
     }
 
