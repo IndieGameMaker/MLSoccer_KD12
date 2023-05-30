@@ -7,7 +7,9 @@ public class Ball : MonoBehaviour
 {
     public Agent[] players;
 
-    // Start is called before the first frame update
+    private Rigidbody rb;
+    public int blueScore, redScore;
+
     void Start()
     {
 
