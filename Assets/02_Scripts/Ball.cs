@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
+using TMPro;
 
 public class Ball : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Ball : MonoBehaviour
 
     private Rigidbody rb;
     public int blueScore, redScore;
+
+    public TMP_Text blueTeamScore;
+    public TMP_Text redTeamScore;
 
     void Start()
     {
