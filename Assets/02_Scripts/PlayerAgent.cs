@@ -28,17 +28,28 @@ public class PlayerAgent : Agent
 
     // Behaviour Parameters 컴포넌트
     [SerializeField] private BehaviorParameters bps;
+    [SerializeField] private Rigidbody rb;
 
     public override void Initialize()
     {
         // 팀 설정
         bps = GetComponent<BehaviorParameters>();
         bps.TeamId = (int)team;
+        // 물리 설정
+        rb = GetComponent<Rigidbody>();
+        rb.mass = 10.0f;
+        rb.constraints = RigidbodyConstraints.FreezePositionY
+                        | RigidbodyConstraints.FreezeRotationX
+                        | RigidbodyConstraints.FreezeRotationZ;
+
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
         // 플레이어 색상 설정
         GetComponent<Renderer>().material = materials[(int)team];
-
+        // 플레이어의 위치 및 각도 설정
         InitPlayer();
+        // 최대 스텝수 설정
+        MaxStep = 10000;
     }
 
     // 플레이어 위치와 회전을 최기화
