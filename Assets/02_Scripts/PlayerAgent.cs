@@ -134,4 +134,17 @@ public class PlayerAgent : Agent
         transform.localPosition = (team == Team.BLUE) ? initPosBlue : initPosRed;
         transform.localRotation = (team == Team.BLUE) ? initRotBlue : initRotRed;
     }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.collider.CompareTag("ball"))
+        {
+            // 볼 터치시 + 리워드
+            AddReward(0.2f);
+
+            // 킥 방향 벡터 계산
+            Vector3 kickDir = coll.GetContact(0).point - transform.position;
+            coll.gameObject.GetComponent<Rigidbody>().AddForce(kickDir.normalized * 800.0f);
+        }
+    }
 }
