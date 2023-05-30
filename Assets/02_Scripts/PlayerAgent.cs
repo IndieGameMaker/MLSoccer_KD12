@@ -81,6 +81,10 @@ public class PlayerAgent : Agent
             Branch[1] 정지, 왼쪽 이동, 오른쪽 이동  (Q, E)
             Branch[2] 정지, 왼쪽 회전, 오른쪽 회전  (A, D)
         */
+        // Branch[0]
+        if (Input.GetKey(KeyCode.W)) actions[0] = 1;
+        if (Input.GetKey(KeyCode.S)) actions[0] = 2;
+
 
 
     }

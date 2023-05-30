@@ -418,6 +418,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628082949901530251, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6710165897710600514, guid: 3932b51bc4ac44ac480318875173c20f, type: 3}
       propertyPath: m_Enabled
       value: 1
