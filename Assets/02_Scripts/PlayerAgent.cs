@@ -85,8 +85,13 @@ public class PlayerAgent : Agent
         if (Input.GetKey(KeyCode.W)) actions[0] = 1;
         if (Input.GetKey(KeyCode.S)) actions[0] = 2;
 
+        // Branch[1]
+        if (Input.GetKey(KeyCode.Q)) actions[1] = 1;
+        if (Input.GetKey(KeyCode.E)) actions[1] = 2;
 
-
+        // Branch[2]
+        if (Input.GetKey(KeyCode.A)) actions[2] = 1;
+        if (Input.GetKey(KeyCode.D)) actions[2] = 2;
     }
 
 
