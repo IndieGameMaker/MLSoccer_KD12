@@ -26,19 +26,25 @@ public class PlayerAgent : Agent
     // 플레이어 색상
     public Material[] materials;
 
-    // 플레이어 위치와 회전을 최기화
-    public void InitPlayer()
-    {
-        transform.localPosition = (team == Team.BLUE) ? initPosBlue : initPosRed;
-        transform.localRotation = (team == Team.BLUE) ? initRotBlue : initRotRed;
-    }
+    // Behaviour Parameters 컴포넌트
+    [SerializeField] private BehaviorParameters bps;
 
     public override void Initialize()
     {
+        // 팀 설정
+        bps = GetComponent<BehaviorParameters>();
+        bps.TeamId = (int)team;
+
         // 플레이어 색상 설정
         GetComponent<Renderer>().material = materials[(int)team];
 
         InitPlayer();
     }
 
+    // 플레이어 위치와 회전을 최기화
+    public void InitPlayer()
+    {
+        transform.localPosition = (team == Team.BLUE) ? initPosBlue : initPosRed;
+        transform.localRotation = (team == Team.BLUE) ? initRotBlue : initRotRed;
+    }
 }
