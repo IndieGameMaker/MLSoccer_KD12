@@ -40,6 +40,7 @@ public class PlayerAgent : Agent
         rb.mass = 10.0f;
         rb.constraints = RigidbodyConstraints.FreezePositionY
                         | RigidbodyConstraints.FreezeRotationX
+                        | RigidbodyConstraints.FreezeRotationY
                         | RigidbodyConstraints.FreezeRotationZ;
 
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
