@@ -90,6 +90,12 @@ public class PlayerAgent : Agent
             case 1: dir = -transform.right; break;
             case 2: dir = transform.right; break;
         }
+
+        switch (rotate)
+        {
+            case 1: rot = -transform.up; break;
+            case 2: rot = transform.up; break;
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
